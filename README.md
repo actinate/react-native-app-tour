@@ -1,9 +1,9 @@
 <h1 align="center">
 
   <p align="center">
-    <a href="https://www.npmjs.com/package/react-native-taptargetview"><img src="http://img.shields.io/npm/v/react-native-taptargetview.svg?style=flat" /></a>
-    <a href="https://github.com/prscX/react-native-taptargetview/pulls"><img alt="PRs Welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" /></a>
-    <a href="https://github.com/prscX/react-native-taptargetview#License"><img src="https://img.shields.io/npm/l/react-native-taptargetview.svg?style=flat" /></a>
+    <a href="https://www.npmjs.com/package/react-native-app-tour"><img src="http://img.shields.io/npm/v/react-native-app-tour.svg?style=flat" /></a>
+    <a href="https://github.com/prscX/react-native-app-tour/pulls"><img alt="PRs Welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" /></a>
+    <a href="https://github.com/prscX/react-native-app-tour#License"><img src="https://img.shields.io/npm/l/react-native-app-tour.svg?style=flat" /></a>
   </p>
 
     ReactNative: Native App Tour Library (Android/iOS)
@@ -24,9 +24,44 @@ This library is a React Native bridge around native app tour libraries. It allow
 
 ## 📖 Getting started
 
+`$ npm install react-native-app-tour --save`
+
+## **RN60 >= RNAT V1 >**
+
+> RN60 above please use `react-native-app-tour` V1 and above
+
+- **iOS**
+
 > **iOS Prerequisite:** Please make sure `CocoaPods` is installed on your system
 
-`$ npm install react-native-app-tour --save`
+	- Add the following to your `Podfile` -> `ios/Podfile` and run pod update:
+
+
+```
+  use_native_modules!
+
+  pod 'RNAppTour', :path => '../node_modules/react-native-app-tour/ios'
+
+  use_frameworks!
+
+  pod 'MaterialShowcase', :git => 'https://github.com/prscX/material-showcase-ios', :branch => 'swift-version-fix'
+```
+
+- **Android**
+
+Please add below snippet into your app `build.gradle`
+
+```
+allprojects {
+    repositories {
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+
+## **RN60 < RNAT V1 <**
+
+> RN60 below please use `react-native-app-tour` V.0.*
 
 `$ react-native link react-native-app-tour`
 
@@ -35,20 +70,8 @@ This library is a React Native bridge around native app tour libraries. It allow
   - Please add below script in your `build.gradle`
 
 ```
-buildscript {
-    repositories {
-        jcenter()
-        maven { url "https://maven.google.com" }
-        maven { url "https://jitpack.io" }
-        ...
-    }
-}
-
 allprojects {
     repositories {
-        mavenLocal()
-        jcenter()
-        maven { url "https://maven.google.com" }
         maven { url "https://jitpack.io" }
         ...
     }

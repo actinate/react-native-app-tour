@@ -1,6 +1,7 @@
 {
   "name": "react-native-app-tour",
-  "version": "0.0.21",
+  "version": "1.0.1",
+  "homepage": "n/a",
   "description": "React Native: Native App Tour Library",
   "repository": {
     "type": "git",
@@ -8,17 +9,14 @@
   },
   "main": "RNAppTour.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "node ../pod-installer/index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "react-native"
   ],
   "author": "Pranav Raj Singh Chauhan",
   "license": "Apache License",
-  "dependencies": {
-    "pod-installer": "0.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "prettier-pack": "0.0.8"
   }
